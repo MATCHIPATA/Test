@@ -1,0 +1,7 @@
+<?php	
+  require_once ("Connexion.php");	
+  extract($_GET);	$Id=$_GET['Id'];	
+  $req="DELETE FROM tache  Where (Id_Tache=$Id)";	
+  mysql_query($req) or die(mysql_errno()); 	
+  header("location:AfficherTaches.php");
+?>
