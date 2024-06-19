@@ -1,0 +1,8 @@
+<?php	
+   require_once("Connexion.php");	
+   $libelle=$_POST['libelle'];	
+   $NbreJr=$_POST['NbreJr'];	
+   $req="insert into tache(Libelle,NbrJr) values ('$libelle','$NbreJr')";	
+   mysql_query($req)or (die(mysql_error())); 	
+   echo "Tache ajoutee avec succes";	
+?>
