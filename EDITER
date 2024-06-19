@@ -1,0 +1,9 @@
+<?php	
+   require_once ("Connexion.php");	
+   $id=$_POST['Id'];	
+   $lib=$_POST['libelle'];	
+   $NbreJr=$_POST['NbreJr'];	
+   $req="update tache set Libelle='$lib',NbrJr='$NbreJr' where Id_Tache=$id";	
+   mysql_query($req)or (die(mysql_error()));	
+   header("location:AfficherTaches.php");
+?>
